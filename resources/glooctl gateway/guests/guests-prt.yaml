@@ -14,6 +14,19 @@ spec:
         name: guests-healthcheck-rt
         namespace: gloo-system
     - matchers:
+        - exact: /guests/
+      options:
+        headerManipulation:
+          responseHeadersToRemove:
+            - content-type
+          responseHeadersToAdd:
+            - header:
+                key: content-type
+                value: application/json
+      directResponseAction:
+        body: '{"error_cd":"404","error_msg":"Invalid route"}'
+        status: 404
+    - matchers:
         - prefix: /guests/.*
       delegateAction:
         name: guests-id-rt

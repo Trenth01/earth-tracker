@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9826db72-4a57-4faf-928c-c762195d8f56" name="Changes" comment="Day 2 - kubectl deploy all three services">
+    <list default="true" id="9826db72-4a57-4faf-928c-c762195d8f56" name="Changes" comment="Day 2 - correcting gateway proxy and making app accessible from gloo gateway">
+      <change afterPath="$PROJECT_DIR$/resources/glooctl gateway/admin/admin-init-rt.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glooctl gateway/admin/admin-restart-rl.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-healthcheck-rl.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-healthcheck-rt.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-prt.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-us.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/k8s/basic-auth.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-id-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-id-rt.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-healthcheck-rl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/admin/admin-init-rl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-healthcheck-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/admin/admin-restart-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-id-rl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-id-rl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-id-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-id-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-prt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/admin/admin-prt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-rl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-rl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests/guests-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-us.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/admin/admin-us.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl gateway/guests-vs.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-vs.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,20 +51,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Trent/Documents/fivePlus/resources/glooctl",
+    "last_opened_file_path": "C:/Users/Trent/Documents/fivePlus/resources/glooctl gateway/admin",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Trent\Documents\fivePlus\resources\glooctl gateway\admin" />
       <recent name="C:\Users\Trent\Documents\fivePlus\resources\glooctl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Trent\Documents\fivePlus\resources\glooctl gateway\guests" />
       <recent name="C:\Users\Trent\Documents\fivePlus\flask_app" />
       <recent name="C:\Users\Trent\Documents\fivePlus\resources\k8s" />
       <recent name="C:\Users\Trent\Documents\fivePlus\resources" />
       <recent name="C:\Users\Trent\Documents\fivePlus\flask_app\web" />
-      <recent name="C:\Users\Trent\Documents\fivePlus\web" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -134,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732024849878</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Day 2 - correcting gateway proxy and making app accessible from gloo gateway">
+      <created>1732027090967</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732027090967</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +173,7 @@
     <MESSAGE value="Day 1 - Flask REST API and Postgress" />
     <MESSAGE value="Day 2 - Gloo ctl guests proxy" />
     <MESSAGE value="Day 2 - kubectl deploy all three services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 2 - kubectl deploy all three services" />
+    <MESSAGE value="Day 2 - correcting gateway proxy and making app accessible from gloo gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 2 - correcting gateway proxy and making app accessible from gloo gateway" />
   </component>
 </project>

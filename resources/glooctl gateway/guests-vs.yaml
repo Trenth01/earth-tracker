@@ -14,4 +14,9 @@ spec:
         delegateAction:
           name: guests-prt
           namespace: gloo-system
+      - matchers:
+          - prefix: /admin
+        delegateAction:
+          name: admin-prt
+          namespace: gloo-system
 
