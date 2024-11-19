@@ -1,0 +1,19 @@
+apiVersion: ratelimit.solo.io/v1alpha1
+kind: RateLimitConfig
+metadata:
+  labels:
+    proxy: guests
+  name: guests-healthcheck-rl
+  namespace: gloo-system
+spec:
+  raw:
+    descriptors:
+      - key: generic_key
+        value: count
+        rateLimit:
+          requestsPerUnit: 3
+          unit: SECOND
+    rateLimits:
+      - actions:
+          - genericKey:
+              descriptorValue: count

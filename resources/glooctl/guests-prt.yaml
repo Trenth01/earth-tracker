@@ -1,0 +1,25 @@
+apiVersion: gateway.solo.io/v1
+kind: RouteTable
+metadata:
+  labels:
+    proxy: guests
+    route: parent
+  name: guests-prt
+  namespace: gloo-system
+spec:
+  routes:
+    - matchers:
+        - prefix: /guests/healthcheck
+      delegateAction:
+        name: guests-healthcheck-rt
+        namespace: gloo-system
+    - matchers:
+        - prefix: /guests/.*
+      delegateAction:
+        name: guests-id-rt
+        namespace: gloo-system
+    - matchers:
+        - prefix: /guests
+      delegateAction:
+        name: guests-rt
+        namespace: gloo-system

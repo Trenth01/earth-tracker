@@ -1,0 +1,15 @@
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  labels:
+    proxy: guests
+    upstream: guests-flask
+  name: guests-us
+  namespace: gloo-system
+spec:
+  connectionConfig:
+    connectTimeout: 2s
+  static:
+    hosts:
+      - addr: local.flask.com
+        port: 5000

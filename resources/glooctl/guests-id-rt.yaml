@@ -1,0 +1,60 @@
+apiVersion: gateway.solo.io/v1
+kind: RouteTable
+metadata:
+  labels:
+    proxy: guests
+    route: healthcheck
+  name: guests-id-rt
+  namespace: gloo-system
+spec:
+  routes:
+    - matchers:
+        - headers:
+            - name: ':method'
+              value: GET
+              invertMatch: true
+            - name: ':method'
+              value: DELETE
+              invertMatch: true
+          regex: /guests/.*
+      options:
+        headerManipulation:
+          responseHeadersToRemove:
+            - content-type
+          responseHeadersToAdd:
+            - header:
+                key: content-type
+                value: application/json
+      directResponseAction:
+        body: '{"error_cd":"405","error_msg":"Invalid HTTP verb for the requested resource"}'
+        status: 405
+    - matchers:
+        - regex: /guests/.*
+          methods:
+            - GET
+            - DELETE
+      options:
+        stagedTransformations:
+          regular:
+            requestTransforms:
+              - requestTransformation:
+                  transformationTemplate:
+                    extractors:
+                      id:
+                        header: :path
+                        regex: /guests/(.*)
+                        subgroup: 1
+                    headers:
+                      :path:
+                        text: '/api/postgresql/guests/{{id}}'
+        prefixRewrite: /api/postgresql/health
+        rateLimitConfigs:
+          refs:
+            - name: guests-id-rl
+              namespace: gloo-system
+        timeout: 5s
+      routeAction:
+        single:
+          upstream:
+            name: guests-us
+            namespace: gloo-system
