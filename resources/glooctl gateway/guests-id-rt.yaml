@@ -47,7 +47,6 @@ spec:
                     headers:
                       :path:
                         text: '/api/postgresql/guests/{{id}}'
-        prefixRewrite: /api/postgresql/health
         rateLimitConfigs:
           refs:
             - name: guests-id-rl

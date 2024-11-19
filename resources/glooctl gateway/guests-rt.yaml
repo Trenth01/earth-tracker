@@ -4,7 +4,7 @@ metadata:
   labels:
     proxy: guests
     route: healthcheck
-  name: guests-healthcheck-rt
+  name: guests-rt
   namespace: gloo-system
 spec:
   routes:
@@ -32,11 +32,11 @@ spec:
         body: '{"error_cd":"405","error_msg":"Invalid HTTP verb for the requested resource"}'
         status: 405
     - matchers:
-        - exact: /guests
-          methods:
-            - GET
-            - PUT
-            - POST
+      - exact: /guests
+        methods:
+          - GET
+          - PUT
+          - POST
       options:
         prefixRewrite: /api/postgresql/guests
         rateLimitConfigs:
