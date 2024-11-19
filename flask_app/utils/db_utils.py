@@ -1,6 +1,6 @@
 from contextlib import contextmanager
 import psycopg2
-from flask_app.constants.postgress_constants import DB_CONFIG
+from constants import DB_CONFIG
 
 @contextmanager
 def db_connection():

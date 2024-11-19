@@ -1,6 +1,6 @@
 import json
 
-from flask_app.constants.flask_constants import OCTET_STREAM
+from constants import OCTET_STREAM
 
 
 def custom_response(message: str, response_code: int):

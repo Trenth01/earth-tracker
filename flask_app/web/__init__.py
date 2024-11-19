@@ -1,8 +1,7 @@
 from flask import Flask
 from flask_restful import Api
-
-from flask_app.web.db_admin import DatabaseInitResource, DatabaseFlushRestartResource
-from flask_app.web.db_controller import DatabaseHealthResource, DatabaseGuestsResource, DatabaseGuestIdResource
+from .db_admin import *
+from .db_controller import *
 
 API = "api"
 DB_RESOURCES = f'/{API}/postgresql'

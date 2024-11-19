@@ -2,9 +2,8 @@ import re
 from flask import jsonify
 from flask_restful import Resource, reqparse, abort
 from psycopg2 import errors
-from flask_app.utils.db_utils import db_connection, table_exists
-from flask_app.constants.postgress_constants import DEVICE_NAME, MAC_ADDRESS, TABLE_NAME, ID, LAST_SEEN
-from flask_app.utils.flask_utils import custom_response
+from utils import db_connection, table_exists, custom_response
+from constants import DEVICE_NAME, MAC_ADDRESS, TABLE_NAME, ID, LAST_SEEN
 
 
 def valid_mac_address(mac_id: str) -> bool:

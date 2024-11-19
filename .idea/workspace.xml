@@ -4,17 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9826db72-4a57-4faf-928c-c762195d8f56" name="Changes" comment="Day 1 - Flask REST API and Postgress">
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-healthcheck-rl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-healthcheck-rt.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-id-rl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-id-rt.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-prt.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-rl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-rt.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-us.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/glooctl/guests-vs.yaml" afterDir="false" />
+    <list default="true" id="9826db72-4a57-4faf-928c-c762195d8f56" name="Changes" comment="Day 2 - Gloo ctl guests proxy">
+      <change afterPath="$PROJECT_DIR$/flask_app/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_app/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/k8s/flask.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/k8s/gateway-proxy.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fivePlus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fivePlus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/constants/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/constants/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/constants/postgress_constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/constants/postgress_constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/utils/db_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/utils/db_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/utils/flask_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/utils/flask_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/web/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/web/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/web/db_admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/web/db_admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/web/db_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/web/db_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-healthcheck-rl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-healthcheck-rl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-healthcheck-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-healthcheck-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-id-rl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-id-rl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-id-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-id-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-prt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-prt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-rl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-rl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-rt.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-rt.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-us.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-us.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glooctl/guests-vs.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/glooctl gateway/guests-vs.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +68,35 @@
       <recent name="C:\Users\Trent\Documents\fivePlus\resources\glooctl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Trent\Documents\fivePlus\flask_app" />
+      <recent name="C:\Users\Trent\Documents\fivePlus\resources\k8s" />
       <recent name="C:\Users\Trent\Documents\fivePlus\resources" />
       <recent name="C:\Users\Trent\Documents\fivePlus\flask_app\web" />
-      <recent name="C:\Users\Trent\Documents\fivePlus\resources\k8s" />
-      <recent name="C:\Users\Trent\Documents\fivePlus\flask_app" />
       <recent name="C:\Users\Trent\Documents\fivePlus\web" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fivePlus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Trent\Documents\fivePlus\flask_app\app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="database_controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fivePlus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,30 +118,9 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fivePlus" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_app/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.database_controller" />
       </list>
     </recent_temporary>
@@ -126,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731975304660</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Day 2 - Gloo ctl guests proxy">
+      <created>1732013743231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732013743231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +164,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Day 1 - Flask REST API and Postgress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 1 - Flask REST API and Postgress" />
+    <MESSAGE value="Day 2 - Gloo ctl guests proxy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 2 - Gloo ctl guests proxy" />
   </component>
 </project>

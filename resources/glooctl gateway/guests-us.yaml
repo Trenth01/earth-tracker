@@ -9,7 +9,7 @@ metadata:
 spec:
   connectionConfig:
     connectTimeout: 2s
-  static:
-    hosts:
-      - addr: local.flask.com
-        port: 5000
+  kube:
+    serviceName: flask-app
+    serviceNamespace: default
+    servicePort: 5000
