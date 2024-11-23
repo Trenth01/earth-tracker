@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jellyfin
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jellyfin
+  namespace: jellyfin
+  labels:
+    app: jellyfin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jellyfin
+  template:
+    metadata:
+      labels:
+        app: jellyfin
+    spec:
+      containers:
+        - name: jellyfin
+          image: jellyfin/jellyfin:latest
+          ports:
+            - containerPort: 8096 # Jellyfin HTTP port
+            - containerPort: 8920 # Jellyfin HTTPS port
+          env:
+            - name: PUID
+              value: "${PUID}"
+            - name: PGID
+              value: "${PGID}"
+            - name: TZ
+              value: "${TZ}"
+          volumeMounts:
+            - name: jellyfin-config-pv
+              mountPath: "/config"
+            - name: jellyfin-media-pv
+              mountPath: "/media"
+            - name: downloads-volume
+              mountPath: "/mnt/downloads_volume"
+      volumes:
+        - name: jellyfin-config-pv
+          persistentVolumeClaim:
+            claimName: jellyfin-config-pvc
+        - name: jellyfin-media-pv
+          persistentVolumeClaim:
+            claimName: jellyfin-media-pvc
+        - name: downloads-volume
+          hostPath:
+            path: /mnt/downloads_volume
+            type: Directory

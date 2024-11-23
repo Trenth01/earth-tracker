@@ -7,7 +7,7 @@ spec:
   displayName: guests-vs
   virtualHost:
     domains:
-      - 'local.trent.org'
+      - '*'
     routes:
       - matchers:
           - prefix: /guests
